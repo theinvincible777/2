@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 35px;
+        font-size: medium;
+        padding: 10px;
+      }
+
+      .container {
+        background-color: rgba(0, 0, 0, 0.17);
+        padding: 2em;
+        border: 2px solid black;
+        border-radius: 7px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="password"],
+      input[type="date"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 7px;
+        margin: 13px;
+      }
+
+      fieldset {
+        border-radius: 7px;
+        border: 1px solid black;
+        background-color: white;
+      }
+
+      .main_heading {
+        text-align: center;
+      }
+
+      input[type="submit"] {
+        background-color: rgb(63, 126, 252);
+        color: white;
+        font-size: x-large;
+        font-weight: bold;
+        font-style: italic;
+        padding: 15px;
+        border-radius: 7px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: navy;
+      }
+    </style>
+    <title>Payment Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" method="get">
+        <h1 class="main_heading">Payment Form</h1>
+        <hr />
+        <p style="color: red">Mandatory Fields are followed by *</p>
+        <h2>Contact Information</h2>
+        <p>
+          <b>Name</b>: *
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Enter your name"
+          />
+        </p>
+        <fieldset>
+          <legend><b>Gender</b> *</legend>
+          <p>
+            Male
+            <input type="radio" name="gender" id="male" required /> Female<input
+              type="radio"
+              name="gender"
+              id="female"
+              required
+            />
+          </p>
+        </fieldset>
+        <p>
+          <b>Address</b>: *
+          <textarea
+            name="address"
+            id="address"
+            cols="100"
+            rows="10"
+            required
+            placeholder="Enter your full address"
+          ></textarea>
+        </p>
+        <p>
+          <b>Email</b>:
+          <input
+            type="email"
+            placeholder="Enter your email id"
+            name="email"
+            id="email"
+          />
+        </p>
+        <p>
+          <b>Pincode</b>: *
+          <input
+            type="number"
+            placeholder="Enter 6 digit pincode"
+            name="pincode"
+            id="pincode"
+            required
+          />
+        </p>
+        <h2>Payment Information</h2>
+        <p>
+          <b>Card Type</b>: *
+          <select name="card_type" id="card_type" required>
+            <option value="">--Select a Card type--</option>
+            <option value="visa">Visa</option>
+            <option value="rupay">Rupay</option>
+            <option value="mastercard">Mastercard</option>
+          </select>
+        </p>
+        <p>
+          <b>Card Number</b>: *
+          <input
+            type="number"
+            placeholder="1111-2222-3333-4444"
+            name="card_number"
+            id="card_number"
+            required
+          />
+        </p>
+        <p>
+          <b>Valid Upto</b>: *
+          <input type="date" name="expiry date" id="expiry date" required />
+        </p>
+        <p>
+          <b>CVV</b>: *
+          <input
+            type="password"
+            placeholder="123"
+            name="cvv"
+            id="cvv"
+            required
+          />
+        </p>
+        <p>
+          <input class="pay_now" type="submit" value="Pay Now" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
